@@ -1,3 +1,4 @@
+import Logout from "@/components/logout";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
@@ -14,6 +15,7 @@ export default async function DashboardPage() {
     return (
         <div>
             <h1>Welcome {session.user.name}</h1>
+            <Logout />
         </div>
     )
 }
