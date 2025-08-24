@@ -25,7 +25,7 @@ export const auth = betterAuth({
         enabled: true,
         sendResetPassword: async ({ user, url }: AuthEmailProps) => {
             await resend.emails.send({
-                from: 'Luti <contact@diegocampuzano.dev>',
+                from: 'Reset your password <contact@diegocampuzano.dev>',
                 to: [user.email],
                 subject: "Reset your password",
                 react: PasswordResetEmail({ userEmail: user.email, resetLink: url }),
@@ -35,13 +35,19 @@ export const auth = betterAuth({
     emailVerification: {
         sendVerificationEmail: async ({ user, url }: AuthEmailProps) => {
             await resend.emails.send({
-                from: 'Luti <contact@diegocampuzano.dev>',
+                from: 'Verify your email address <contact@diegocampuzano.dev>',
                 to: [user.email],
                 subject: 'Verify your email address',
                 react: UserVerificationEmail({ userEmail: user.email, verificationUrl: url }),
             });
         },
         sendOnSignUp: true,
+    },
+    socialProviders: {
+        google: { 
+            clientId: process.env.GOOGLE_CLIENT_ID as string, 
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET as string, 
+        }, 
     },
     plugins: [nextCookies()]
 });
