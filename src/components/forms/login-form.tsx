@@ -74,7 +74,7 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Welcome back</CardTitle>
+          <CardTitle className="text-xl">Bienvenido</CardTitle>
         </CardHeader>
         <CardContent>
           <Form {...form}>
@@ -93,12 +93,12 @@ export function LoginForm({
                         fill="currentColor"
                       />
                     </svg>
-                    Login with Google
+                    Ingresar con Google
                   </Button>
                 </div>
                 <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
                   <span className="bg-card text-muted-foreground relative z-10 px-2">
-                    Or continue with
+                    O continuar con
                   </span>
                 </div>
                 <div className="grid gap-6">
@@ -124,12 +124,12 @@ export function LoginForm({
                       render={({ field }) => (
                         <FormItem>
                           <div className="flex items-center">
-                            <FormLabel>Password</FormLabel>
+                            <FormLabel>Contraseña</FormLabel>
                             <Link
                               href="/forgot-password"
                               className="ml-auto text-sm underline-offset-4 hover:underline"
                             >
-                              Forgot your password?
+                              Olvidaste tu contraseña?
                             </Link>
                           </div>
                           <FormControl>
@@ -148,14 +148,14 @@ export function LoginForm({
                     {isLoading ? (
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                     ) : (
-                      "Login"
+                      "Iniciar Sesión"
                     )}
                   </Button>
                 </div>
                 <div className="text-center text-sm">
-                  Don&apos;t have an account?{" "}
+                  No tienes una cuenta?{" "}
                   <Link href="/signup" className="underline underline-offset-4">
-                    Sign up
+                    Regístrate
                   </Link>
                 </div>
               </div>
@@ -164,9 +164,9 @@ export function LoginForm({
         </CardContent>
       </Card>
       <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
-        By clicking continue, you agree to our{" "}
-        <Link href="#">Terms of Service</Link> and{" "}
-        <Link href="#">Privacy Policy</Link>.
+        Al hacer clic en continuar, aceptas nuestros{" "}
+        <Link href="#">Términos de Servicio</Link> y{" "}
+        <Link href="#">Política de Privacidad</Link>.
       </div>
     </div>
   );

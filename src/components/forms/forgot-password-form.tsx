@@ -21,7 +21,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { signInUser } from "@/app/server/users";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
@@ -68,11 +67,10 @@ export function ForgotPasswordForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Forgot Password?</CardTitle>
+          <CardTitle className="text-xl">Olvidaste tu contraseña?</CardTitle>
         </CardHeader>
         <CardDescription className="text-center px-6">
-          Enter your email address below and we&apos;ll send you a link to reset
-          your password.
+          Ingresa tu dirección de correo electrónico a continuación y te enviaremos un enlace para restablecer tu contraseña.
         </CardDescription>
         <CardContent>
           <Form {...form}>
@@ -87,7 +85,7 @@ export function ForgotPasswordForm({
                         <FormItem>
                           <FormLabel>Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="m@example.com" {...field} />
+                            <Input placeholder="m@ejemplo.com" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -98,14 +96,14 @@ export function ForgotPasswordForm({
                     {isLoading ? (
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                     ) : (
-                      "Reset Password"
+                      "Restablecer Contraseña"
                     )}
                   </Button>
                 </div>
                 <div className="text-center text-sm">
-                  Don&apos;t have an account?{" "}
+                  No tienes una cuenta?{" "}
                   <Link href="/signup" className="underline underline-offset-4">
-                    Sign up
+                    Regístrate
                   </Link>
                 </div>
               </div>
@@ -114,9 +112,9 @@ export function ForgotPasswordForm({
         </CardContent>
       </Card>
       <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
-        By clicking continue, you agree to our{" "}
-        <Link href="#">Terms of Service</Link> and{" "}
-        <Link href="#">Privacy Policy</Link>.
+        Al hacer clic en continuar, aceptas nuestros{" "}
+        <Link href="#">Términos de Servicio</Link> y{" "}
+        <Link href="#">Política de Privacidad</Link>.
       </div>
     </div>
   );
