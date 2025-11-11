@@ -46,7 +46,7 @@ export const HeroHeader = () => {
                 className="flex items-center space-x-2"
               >
                 <Scale />
-                <span className="font-semibold bg-gradient-to-br from-emerald-400 to-violet-400 bg-clip-text text-transparent">
+                <span className="font-semibold bg-gradient-to-br from-blue-400 to-violet-500 bg-clip-text text-transparent">
                   Abogado Virtual
                 </span>
               </Link>
