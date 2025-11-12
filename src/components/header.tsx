@@ -8,10 +8,11 @@ import { cn } from "@/lib/utils";
 import { Scale } from "lucide-react";
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "Home", href: "#hero" },
+  { name: "Features", href: "#features" },
+  { name: "Stats", href: "#stats" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "Footer", href: "#footer" },
 ];
 
 export const HeroHeader = () => {
