@@ -26,7 +26,7 @@ const transitionVariants = {
       },
     },
   },
-};
+} as const;
 
 export default function HeroSection() {
   return (
@@ -117,7 +117,7 @@ export default function HeroSection() {
                       size="lg"
                       className="rounded-xl px-5 text-base"
                     >
-                      <Link href="#link">
+                      <Link href="/dashboard">
                         <span className="text-nowrap">Consultar Ahora</span>
                       </Link>
                     </Button>

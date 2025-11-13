@@ -6,14 +6,8 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Scale } from "lucide-react";
-
-const menuItems = [
-  { name: "Home", href: "#hero" },
-  { name: "Features", href: "#features" },
-  { name: "Stats", href: "#stats" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "Footer", href: "#footer" },
-];
+import { menuItems } from "@/utils";
+import { ThemeSwitcher } from "./kibo-ui/theme-switcher";
 
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
@@ -92,6 +86,9 @@ export const HeroHeader = () => {
                   ))}
                 </ul>
               </div>
+              <div className="mr-4 flex lg:mr-0">
+                <ThemeSwitcher />
+              </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Button
                   asChild
@@ -117,7 +114,7 @@ export const HeroHeader = () => {
                   size="sm"
                   className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
                 >
-                  <Link href="#">
+                  <Link href="/login">
                     <span>Comenzar</span>
                   </Link>
                 </Button>
