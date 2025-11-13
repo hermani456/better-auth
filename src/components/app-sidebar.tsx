@@ -26,6 +26,16 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 
+type User = {
+  id: string;
+  email: string;
+  emailVerified: boolean;
+  name: string;
+  createdAt: Date;
+  updatedAt: Date;
+  image?: string | null;
+};
+
 // This is sample data.
 const data = {
   user: {
@@ -156,7 +166,20 @@ const data = {
   ],
 };
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
+  user?: User;
+}
+
+export function AppSidebar({ user, ...props }: AppSidebarProps) {
+  const displayUser = user
+    ? {
+        name: user.name,
+        email: user.email,
+        avatar: "/avatars/shadcn.jpg",
+        image: user.image || undefined,
+      }
+    : data.user;
+
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
@@ -167,7 +190,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser user={displayUser} />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

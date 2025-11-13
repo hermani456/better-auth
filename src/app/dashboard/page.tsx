@@ -19,6 +19,7 @@ import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import Chat from "@/components/chat";
 import globe from "../../../public/globe.svg";
+import { ThemeSwitcher } from "@/components/kibo-ui/theme-switcher";
 
 export default async function Page() {
   const session = await auth.api.getSession({
@@ -30,7 +31,7 @@ export default async function Page() {
   }
   return (
     <SidebarProvider>
-      <AppSidebar />
+      <AppSidebar user={session.user} />
       <SidebarInset>
         <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">
@@ -52,6 +53,9 @@ export default async function Page() {
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
+          </div>
+          <div className="ml-auto p-4">
+            <ThemeSwitcher />
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
