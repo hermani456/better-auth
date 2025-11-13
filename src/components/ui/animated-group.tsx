@@ -124,12 +124,29 @@ function AnimatedGroup({
     [asChild]
   );
 
+  if (className) {
+    return (
+      <div className={className}>
+        <MotionComponent
+          initial='hidden'
+          animate='visible'
+          variants={containerVariants}
+        >
+          {React.Children.map(children, (child, index) => (
+            <MotionChild key={index} variants={itemVariants}>
+              {child}
+            </MotionChild>
+          ))}
+        </MotionComponent>
+      </div>
+    );
+  }
+
   return (
     <MotionComponent
       initial='hidden'
       animate='visible'
       variants={containerVariants}
-      className={className}
     >
       {React.Children.map(children, (child, index) => (
         <MotionChild key={index} variants={itemVariants}>
