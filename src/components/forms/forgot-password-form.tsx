@@ -56,7 +56,7 @@ export function ForgotPasswordForm({
       } else {
         toast.error(error.message);
       }
-    } catch (error) {
+    } catch {
       toast.error("An unexpected error occurred.");
     } finally {
       setIsLoading(false);

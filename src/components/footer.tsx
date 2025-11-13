@@ -1,4 +1,3 @@
-import { Logo } from "@/components/logo";
 import { menuItems } from "@/utils";
 import { Scale } from "lucide-react";
 import Link from "next/link";

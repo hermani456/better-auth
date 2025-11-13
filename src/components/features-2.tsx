@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Bot, MailCheck, MessageSquareReply, Settings2, Sparkles, Zap } from "lucide-react";
+import { Bot, MailCheck, MessageSquareReply} from "lucide-react";
 import { ReactNode } from "react";
 
 export default function Features() {
