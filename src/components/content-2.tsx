@@ -1,4 +1,4 @@
-import { CircleCheckBig, Cpu, Zap } from "lucide-react";
+import { CircleCheckBig } from "lucide-react";
 import Image from "next/image";
 
 export default function ContentSection() {
@@ -24,7 +24,7 @@ export default function ContentSection() {
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <CircleCheckBig className="size-4" />
-                  {/* <h3 className="text-sm font-medium">Faaast</h3> */}
+                  <h3 className="text-sm font-medium">Calificado</h3>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   Recibe casos calificados y resumidos.
@@ -33,7 +33,7 @@ export default function ContentSection() {
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <CircleCheckBig className="size-4" />
-                  {/* <h3 className="text-sm font-medium">Powerful</h3> */}
+                  <h3 className="text-sm font-medium">Autónomo</h3>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   Tú tienes el control: acepta o rechaza casos.
@@ -42,19 +42,19 @@ export default function ContentSection() {
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <CircleCheckBig className="size-4" />
-                  {/* <h3 className="text-sm font-medium">Powerful</h3> */}
+                  <h3 className="text-sm font-medium">Especializado</h3>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Tú tienes el control: acepta o rechaza casos.
+                  Enfócate solo en tu área de expertise.
                 </p>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <CircleCheckBig className="size-4" />
-                  {/* <h3 className="text-sm font-medium">Powerful</h3> */}
+                  <h3 className="text-sm font-medium">Preparado</h3>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  Tú tienes el control: acepta o rechaza casos.
+                  Recibe clientes que ya resolvieron sus dudas básicas.
                 </p>
               </div>
             </div>
