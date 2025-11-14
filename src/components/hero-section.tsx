@@ -129,7 +129,7 @@ export default function HeroSection() {
                     variant="ghost"
                     className="h-10.5 rounded-xl px-5"
                   >
-                    <Link href="#link">
+                    <Link href="#lawyers">
                       <span className="text-nowrap">Soy Abogado</span>
                     </Link>
                   </Button>
