@@ -8,13 +8,13 @@ const Logout = () => {
   const router = useRouter();
   const handleLogout = async () => {
     await authClient.signOut();
-    toast.success("Logged out successfully");
+    toast.success("Sesión cerrada con éxito");
     router.push("/");
   };
 
   return (
     <Button className="cursor-pointer" variant="outline" onClick={handleLogout}>
-      Logout
+      Cerrar sesión
     </Button>
   );
 };

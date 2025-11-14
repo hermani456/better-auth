@@ -45,7 +45,7 @@ const data = {
   },
   teams: [
     {
-      name: "Abogado Virtual",
+      name: "Abotgado",
       logo: Gavel,
       plan: "Cliente",
     },
@@ -86,7 +86,7 @@ const data = {
       ],
     },
     {
-      title: "Comunicaciones",
+      title: "Gestiones",
       url: "#",
       icon: Bot,
       items: [

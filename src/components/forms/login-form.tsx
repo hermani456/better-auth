@@ -27,8 +27,8 @@ const formSchema = z.object({
   email: z.email(),
   password: z
     .string()
-    .min(8, "Password must be at least 8 characters long")
-    .max(50, "Password must be at most 50 characters long"),
+    .min(8, "La contraseña debe tener al menos 8 caracteres")
+    .max(50, "La contraseña debe tener como máximo 50 caracteres"),
 });
 
 export function LoginForm({
@@ -57,7 +57,7 @@ export function LoginForm({
         toast.error(response.message);
       }
     } catch {
-      toast.error("An unexpected error occurred.");
+      toast.error("Ocurrió un error inesperado.");
     } finally {
       setIsLoading(false);
     }

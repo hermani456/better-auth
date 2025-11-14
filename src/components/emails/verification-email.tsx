@@ -21,7 +21,7 @@ const UserVerificationEmail = ({
   verificationUrl,
 }: UserVerificationEmailProps) => {
   return (
-    <Html lang="en" dir="ltr">
+    <Html lang="es" dir="ltr">
       <Tailwind>
         <Head />
         <Body className="bg-gray-100 font-sans py-[40px]">
@@ -29,22 +29,21 @@ const UserVerificationEmail = ({
             {/* Header */}
             <Section className="text-center mb-[32px]">
               <Text className="text-[24px] font-bold text-gray-900 m-0">
-                Verify Your Email Address
+                Verifica tu dirección de correo electrónico
               </Text>
             </Section>
 
             {/* Main Content */}
             <Section className="mb-[32px]">
               <Text className="text-[16px] text-gray-700 mb-[16px] m-0">
-                Hi there,
+                Hola,
               </Text>
               <Text className="text-[16px] text-gray-700 mb-[16px] m-0">
-                Thank you for signing up! To complete your registration and
-                secure your account, please verify your email address by
-                clicking the button below.
+                ¡Gracias por registrarte! Para completar tu registro y
+                asegurar tu cuenta, por favor verifica tu dirección de correo electrónico haciendo clic en el botón de abajo.
               </Text>
               <Text className="text-[16px] text-gray-700 mb-[24px] m-0">
-                Email to verify: <strong>{userEmail}</strong>
+                Correo electrónico a verificar: <strong>{userEmail}</strong>
               </Text>
             </Section>
 
@@ -54,15 +53,14 @@ const UserVerificationEmail = ({
                 href={verificationUrl}
                 className="bg-blue-600 text-white px-[32px] py-[16px] rounded-[8px] text-[16px] font-semibold no-underline box-border"
               >
-                Verify Email Address
+                Verificar dirección de correo electrónico
               </Button>
             </Section>
 
             {/* Alternative Link */}
             <Section className="mb-[32px]">
               <Text className="text-[14px] text-gray-600 mb-[8px] m-0">
-                If the button doesn&apos;t work, you can copy and paste this
-                link into your browser:
+                Si el botón no funciona, puedes copiar y pegar este enlace en tu navegador:
               </Text>
               <Text className="text-[14px] text-blue-600 break-all m-0">
                 {verificationUrl}
@@ -72,9 +70,9 @@ const UserVerificationEmail = ({
             {/* Security Note */}
             <Section className="mb-[32px]">
               <Text className="text-[14px] text-gray-600 mb-[8px] m-0">
-                <strong>Security note:</strong> This verification link will
-                expire in 24 hours for your security. If you didn&apos;t create
-                an account with us, please ignore this email.
+                <strong>Nota de seguridad:</strong> Este enlace de verificación
+                expirará en 24 horas por tu seguridad. Si no creaste una cuenta
+                con nosotros, por favor ignora este correo electrónico.
               </Text>
             </Section>
 
@@ -83,19 +81,19 @@ const UserVerificationEmail = ({
             {/* Footer */}
             <Section className="text-center">
               <Text className="text-[12px] text-gray-500 m-0">
-                © {new Date().getFullYear()} Your Company Name. All rights
-                reserved.
+                © {new Date().getFullYear()} Abotgado. Todos los derechos
+                reservados.
               </Text>
               <Text className="text-[12px] text-gray-500 m-0">
-                123 Business Street, Suite 100, City, State 12345
+                Avenida Arturo Prat 157, Oficina 701, Iquique, Chile
               </Text>
               <Text className="text-[12px] text-gray-500 m-0">
                 <a href="#" className="text-gray-500 no-underline">
-                  Unsubscribe
+                  Darse de baja
                 </a>{" "}
                 |
                 <a href="#" className="text-gray-500 no-underline ml-[8px]">
-                  Privacy Policy
+                  Política de privacidad
                 </a>
               </Text>
             </Section>

@@ -81,7 +81,7 @@ export default function Chat({ img }: { img: string }) {
           <Avatar className="h-8 w-8 flex items-center justify-center bg-muted">
             <Scale />
           </Avatar>
-          <span>Abogado Virtual</span>
+          <span>Abotgado</span>
         </CardTitle>
       </CardHeader>
       <CardContent className="p-0 flex-1 min-h-0">

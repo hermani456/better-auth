@@ -52,12 +52,12 @@ export function ForgotPasswordForm({
         redirectTo: "/reset-password"
       });
       if (!error) {
-        toast.success("Password reset email sent.");
+        toast.success("Correo para restablecer contraseña enviado.");
       } else {
         toast.error(error.message);
       }
     } catch {
-      toast.error("An unexpected error occurred.");
+      toast.error("Ocurrió un error inesperado.");
     } finally {
       setIsLoading(false);
     }

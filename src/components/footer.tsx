@@ -13,7 +13,7 @@ export default function FooterSection() {
         >
           <Scale />
           <span className="font-semibold bg-gradient-to-br from-blue-400 to-violet-500 bg-clip-text text-transparent">
-            Abogado Virtual
+            Abotgado
           </span>
         </Link>
 
@@ -157,7 +157,7 @@ export default function FooterSection() {
         </div>
         <span className="text-muted-foreground block text-center text-sm">
           {" "}
-          © {new Date().getFullYear()} Abogado Virtual • Todos los derechos
+          © {new Date().getFullYear()} Abotgado • Todos los derechos
           reservados
         </span>
       </div>

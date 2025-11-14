@@ -26,12 +26,12 @@ const formSchema = z
   .object({
     password: z
       .string()
-      .min(8, "Password must be at least 8 characters long")
-      .max(50, "Password must be at most 50 characters long"),
+      .min(8, "La contraseña debe tener al menos 8 caracteres")
+      .max(50, "La contraseña debe tener como máximo 50 caracteres"),
     confirmPassword: z.string(),
   })
   .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords must match",
+    message: "Las contraseñas deben coincidir",
     path: ["confirmPassword"],
   });
 
@@ -60,7 +60,7 @@ export function ResetPasswordForm({
         token: token ?? "",
       });
       if (!error) {
-        toast.success("Password reset successful");
+        toast.success("Contraseña restablecida con éxito");
         router.push("/login");
       } else {
         toast.error(error.message);
@@ -76,7 +76,7 @@ export function ResetPasswordForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Reset your password</CardTitle>
+          <CardTitle className="text-xl">Restablece tu contraseña</CardTitle>
         </CardHeader>
         <CardContent>
           <Form {...form}>
@@ -90,7 +90,7 @@ export function ResetPasswordForm({
                       render={({ field }) => (
                         <FormItem>
                           <div className="flex items-center">
-                            <FormLabel>Password</FormLabel>
+                            <FormLabel>Contraseña</FormLabel>
                           </div>
                           <FormControl>
                             <Input
@@ -111,7 +111,7 @@ export function ResetPasswordForm({
                       render={({ field }) => (
                         <FormItem>
                           <div className="flex items-center">
-                            <FormLabel>Confirm Password</FormLabel>
+                            <FormLabel>Confirmar Contraseña</FormLabel>
                           </div>
                           <FormControl>
                             <Input
@@ -129,14 +129,14 @@ export function ResetPasswordForm({
                     {isLoading ? (
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                     ) : (
-                      "Reset Password"
+                      "Restablecer Contraseña"
                     )}
                   </Button>
                 </div>
                 <div className="text-center text-sm">
-                  Don&apos;t have an account?{" "}
+                  ¿No tienes una cuenta?{" "}
                   <Link href="/signup" className="underline underline-offset-4">
-                    Sign up
+                    Regístrate
                   </Link>
                 </div>
               </div>
@@ -145,9 +145,9 @@ export function ResetPasswordForm({
         </CardContent>
       </Card>
       <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
-        By clicking continue, you agree to our{" "}
-        <Link href="#">Terms of Service</Link> and{" "}
-        <Link href="#">Privacy Policy</Link>.
+        Al hacer clic en continuar, aceptas nuestros{" "}
+        <Link href="#">Términos de Servicio</Link> y{" "}
+        <Link href="#">Política de Privacidad</Link>.
       </div>
     </div>
   );

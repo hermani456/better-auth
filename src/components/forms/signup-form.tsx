@@ -29,12 +29,12 @@ const formSchema = z
     email: z.email(),
     password: z
       .string()
-      .min(8, "Password must be at least 8 characters long")
-      .max(50, "Password must be at most 50 characters long"),
+      .min(8, "La contraseña debe tener al menos 8 caracteres")
+      .max(50, "La contraseña debe tener como máximo 50 caracteres"),
     confirmPassword: z.string(),
   })
   .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords must match",
+    message: "Las contraseñas deben coincidir",
     path: ["confirmPassword"],
   });
 
@@ -64,13 +64,13 @@ export function SignUpForm({
         values.password
       );
       if (response.success) {
-        toast.success("Check your email for a verification link!");
+        toast.success("¡Revisa tu correo electrónico para un enlace de verificación!");
         router.push("/login");
       } else {
         toast.error(response.message);
       }
     } catch {
-      toast.error("An unexpected error occurred.");
+      toast.error("Ocurrió un error inesperado.");
     } finally {
       setIsLoading(false);
     }
@@ -123,7 +123,7 @@ export function SignUpForm({
                         <FormItem>
                           <FormLabel>Nombre</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" {...field} />
+                            <Input placeholder="María Pérez" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -138,7 +138,7 @@ export function SignUpForm({
                         <FormItem>
                           <FormLabel>Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="m@ejemplo.com" {...field} />
+                            <Input placeholder="email@ejemplo.com" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>

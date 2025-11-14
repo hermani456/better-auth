@@ -48,7 +48,7 @@ export default async function Page() {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Abogado Virtual</BreadcrumbPage>
+                  <BreadcrumbPage>Abotgado</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>

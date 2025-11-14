@@ -11,7 +11,7 @@ export const signInUser = async (email: string, password: string) => {
             },
         })
 
-        return { success: true, message: "Sign in successful" }
+        return { success: true, message: "Inicio de sesión exitoso" }
     } catch (error) {
         const e = error as Error
         return { success: false, message: e.message }
@@ -28,7 +28,7 @@ export const signUpUser = async (name: string, email: string, password: string) 
             },
         })
 
-        return { success: true, message: "Sign up successful" }
+        return { success: true, message: "Registro exitoso" }
     } catch (error) {
         const e = error as Error
         return { success: false, message: e.message }

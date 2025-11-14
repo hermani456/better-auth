@@ -25,9 +25,9 @@ export const auth = betterAuth({
         enabled: true,
         sendResetPassword: async ({ user, url }: AuthEmailProps) => {
             await resend.emails.send({
-                from: 'Reset your password <contact@diegocampuzano.dev>',
+                from: 'Restablecer tu contraseña <contact@diegocampuzano.dev>',
                 to: [user.email],
-                subject: "Reset your password",
+                subject: "Restablecer tu contraseña",
                 react: PasswordResetEmail({ userEmail: user.email, resetLink: url }),
             });
         },
@@ -35,9 +35,9 @@ export const auth = betterAuth({
     emailVerification: {
         sendVerificationEmail: async ({ user, url }: AuthEmailProps) => {
             await resend.emails.send({
-                from: 'Verify your email address <contact@diegocampuzano.dev>',
+                from: 'Verificar dirección de correo electrónico <contact@diegocampuzano.dev>',
                 to: [user.email],
-                subject: 'Verify your email address',
+                subject: 'Verificar dirección de correo electrónico',
                 react: UserVerificationEmail({ userEmail: user.email, verificationUrl: url }),
             });
         },
